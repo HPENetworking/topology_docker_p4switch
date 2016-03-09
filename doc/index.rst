@@ -2,6 +2,7 @@
    :hidden:
 
    developer
+   p4switch
    topology_docker_p4switch/topology_docker_p4switch
 
 =================================
@@ -14,6 +15,7 @@ A Topology P4Switch Node for topology_docker.
 Documentation
 =============
 
+- :doc:`Node documentation. <p4switch>`
 - :doc:`Developer Guide. <developer>`
 - :doc:`Internal Documentation Reference. <topology_docker_p4switch/topology_docker_p4switch>`
 
