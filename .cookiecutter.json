@@ -1,0 +1,14 @@
+{
+    "node_name": "p4switch",
+    "platform_engine_name": "topology_docker",
+    "class_name": "P4SwitchNode",
+    "default_docker_image": "your_default_docker_image",
+    "author": "Hewlett Packard Enterprise Development LP",
+    "email": "hpe-networking@lists.hp.com",
+    "repo_url": "https://github.com/HPENetworking/topology_docker_p4switch",
+    "doc_url": "https://github.com/HPENetworking/topology_docker_p4switch/tree/master/doc",
+    "project_name": "p4switch node for topology_docker",
+    "short_description": "A Topology P4Switch Node for topology_docker.",
+    "year": "2016",
+    "version": "0.1.0"
+}
