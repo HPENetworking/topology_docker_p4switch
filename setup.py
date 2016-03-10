@@ -73,7 +73,10 @@ setup(
         'A Topology P4Switch Node for topology_docker.'
     ),
     long_description=read('README.rst'),
-    url='https://github.com/HPENetworking/topology_docker_p4switch/tree/master/doc',
+    url=(
+        'https://github.com/HPENetworking/'
+        'topology_docker_p4switch/tree/master/doc'
+    ),
     keywords='topology_docker_p4switch',
 
     classifiers=[
