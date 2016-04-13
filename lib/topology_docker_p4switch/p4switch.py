@@ -28,7 +28,6 @@ from subprocess import Popen
 from shlex import split as shsplit
 
 from topology_docker.node import DockerNode
-from topology_docker.utils import ensure_dir
 from topology_docker.shell import DockerBashShell
 
 
@@ -45,31 +44,15 @@ class P4SwitchNode(DockerNode):
 
     def __init__(
             self, identifier,
-            image='topology/p4switch:latest', binds=None,
+            image='topology/p4switch:latest',
             **kwargs):
 
-        # Determine shared directory
-        shared_dir = '/tmp/topology_{}_{}'.format(identifier, str(id(self)))
-        ensure_dir(shared_dir)
-
-        # Add binded directories
-        container_binds = [
-            '{}:/tmp'.format(shared_dir)
-        ]
-        if binds is not None:
-            container_binds.append(binds)
-
         super(P4SwitchNode, self).__init__(
-            identifier,
-            image=image, binds=';'.join(container_binds),
-            **kwargs
+            identifier, image=image, **kwargs
         )
 
         # Behavioral model daemon process
         self._bm_daemon = None
-
-        # Save location of the shared dir in host
-        self.shared_dir = shared_dir
 
         # Add bash shell
         self._shells['bash'] = DockerBashShell(
